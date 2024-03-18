@@ -8,7 +8,6 @@ namespace Algorithms_A1
         public static string[] ReadTxt(string path)
         {
             string[] lines = File.ReadAllLines(path);
-            Console.WriteLine(lines);
             return lines;
         }
     }

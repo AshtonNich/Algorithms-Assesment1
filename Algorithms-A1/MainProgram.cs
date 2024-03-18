@@ -11,9 +11,75 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            string Direct = @"C:\Users\JINX3\Documents\Assets\Assets\Net_1_256.txt";
-            TxtToArray.ReadTxt(Direct);
+            //string Direct = @"Files\Net_1_256.txt";
+            //foreach (string line in TxtToArray.ReadTxt(Direct))
+            //{
+            //Console.WriteLine(line);
+            //}
+            Console.WriteLine("Sorting Algorithms");
+            Console.WriteLine("All file names - ");
+            Console.WriteLine("2048");
+            Console.WriteLine("256");
+            Console.WriteLine("2048-2");
+            Console.WriteLine("256-2");
+            Console.WriteLine("2048-3");
+            Console.WriteLine("256-3");
+            Console.WriteLine("What file woudl you like to sort? - ");
+            string userFile = Console.ReadLine();
+            if (userFile == "2048")
+            {
+                string Direct = @"Files\Net_1_2048.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else if (userFile == "256")
+            {
+                string Direct = @"Files\Net_1_256.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else if (userFile == "2048-2")
+            {
+                string Direct = @"Files\Net_2_2048.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else if (userFile == "256-2")
+            {
+                string Direct = @"Files\Net_2_256.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else if (userFile == "2048-3")
+            {
+                string Direct = @"Files\Net_3_2048.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else if (userFile == "256-3")
+            {
+                string Direct = @"Files\Net_3_256.txt";
+                foreach (string line in TxtToArray.ReadTxt(Direct))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid file name");
+            }
 
         }
+
     }
 }
