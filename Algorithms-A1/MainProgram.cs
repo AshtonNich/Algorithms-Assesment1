@@ -24,7 +24,7 @@ namespace CMP1903_A1_2324
             Console.WriteLine("256-2");
             Console.WriteLine("2048-3");
             Console.WriteLine("256-3");
-            Console.WriteLine("What file woudl you like to sort? - ");
+            Console.WriteLine("What file would you like to sort? - ");
             string userFile = Console.ReadLine();
             if (userFile == "2048")
             {
