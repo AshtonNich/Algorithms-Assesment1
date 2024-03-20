@@ -75,6 +75,7 @@ namespace CMP1903_A1_2324
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Invalid file name");
             }
 
