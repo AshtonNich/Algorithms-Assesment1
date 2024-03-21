@@ -15,11 +15,11 @@ namespace Algorithms_A1
             {
                 if (array[i] == x)
                 {
-                    Console.WriteLine("Element found at index " + i);
+                    Console.WriteLine("Number found at the following index " + i);
                     return;
                 }
             }
-            Console.WriteLine("Element not found");
+            Console.WriteLine("Number not found not found");
         }
     }
 }

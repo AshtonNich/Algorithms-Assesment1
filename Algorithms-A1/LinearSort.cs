@@ -14,17 +14,17 @@ namespace Algorithms_A1
             int steps = 0;
             for (int i = 0; i < n - 1; i++)
             {
-                int min = i;
+                int f = i;
                 for (int j = i + 1; j < n; j++)
                 {
-                    if (array[j] < array[min])
+                    if (array[j] < array[f])
                     {
-                        min = j;
+                        f = j;
                         steps++;
                     }
                 }
-                int discard = array[min];
-                array[min] = array[i];
+                int discard = array[f];
+                array[f] = array[i];
                 array[i] = discard;
             }
             Console.WriteLine("Steps taken - " + steps);
@@ -45,9 +45,9 @@ namespace Algorithms_A1
                         steps++;
                     }
                 }
-                int temp = array[max];
+                int disc = array[max];
                 array[max] = array[i];
-                array[i] = temp;
+                array[i] = disc;
             }
             Console.WriteLine("Steps taken - " + steps);
             Console.WriteLine(("").PadRight(24, '-'));
