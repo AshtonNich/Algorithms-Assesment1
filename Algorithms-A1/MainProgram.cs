@@ -596,13 +596,12 @@ namespace CMP1903_A1_2324
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
                 }
-                Console.WriteLine("Now displaying every tenth Value");
-                string Direct10th = @"Files\Net_1_2048.txt";
-                string[] array10th = (TxtToArray.ReadTxt(Direct10th));
-                int[] lines10th = Array.ConvertAll(array10th, int.Parse);
-                DisplayEveryTenthValue.DisplayTenthValue(lines10th);
-
             }
+            Console.WriteLine("Now displaying every tenth Value");
+            string Direct10th = @"Files\Net_1_2048.txt";
+            string[] array10th = (TxtToArray.ReadTxt(Direct10th));
+            int[] lines10th = Array.ConvertAll(array10th, int.Parse);
+            DisplayEveryTenthValue.DisplayTenthValue(lines10th);
         }
     }
 }
