@@ -8,24 +8,47 @@ namespace Algorithms_A1
 {
     internal class LinearSort
     {
-        public static void LinSort(int[] arr)
+        public static void LinSortAscending(int[] array)
         {
-            int n = arr.Length;
+            int n = array.Length;
+            int steps = 0;
             for (int i = 0; i < n - 1; i++)
             {
                 int min = i;
                 for (int j = i + 1; j < n; j++)
                 {
-                    if (arr[j] < arr[min])
+                    if (array[j] < array[min])
                     {
                         min = j;
+                        steps++;
                     }
                 }
-                int temp = arr[min];
-                arr[min] = arr[i];
-                arr[i] = temp;
+                int discard = array[min];
+                array[min] = array[i];
+                array[i] = discard;
             }
+            Console.WriteLine("Steps taken - " + steps);
         }
-    
+        public static void LinSortDescending(int[] array)
+        {
+            int n = array.Length;
+            int steps = 0;
+            for (int i = 0; i < n - 1; i++)
+            {
+                int max = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (array[j] > array[max])
+                    {
+                        max = j;
+                        steps++;
+                    }
+                }
+                int temp = array[max];
+                array[max] = array[i];
+                array[i] = temp;
+            }
+            Console.WriteLine("Steps taken - " + steps);
+        }
     }
 }
