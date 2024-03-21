@@ -13,25 +13,26 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Sorting Algorithms");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("All file names - ");
-            Console.WriteLine("2048 \n" + "256 \n" + "2048-2 \n" + "256-2 \n" + "2048-3 \n" + "256-3");
-            Console.WriteLine(("").PadRight(24, '-'));
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("What file would you like to sort? - ");
+            Console.WriteLine(("").PadRight(24, '-') + "\nSorting Algorithms\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("All file names - \n" + "2048 \n" + "256 \n" + "2048-2 \n" + "256-2 \n" + "2048-3 \n" + "256-3");
+            Console.WriteLine("What file would you like to sort? - \n" + ("").PadRight(24, '-'));
             Console.ForegroundColor = ConsoleColor.Yellow;
             string userFile = Console.ReadLine();
-            
+            Console.ForegroundColor = ConsoleColor.Cyan;
             if (userFile == "2048")
             {
                 string Direct = @"Files\Net_1_2048.txt";
-                TxtToArray.ReadTxt(Direct);
-                foreach (string line in TxtToArray.ReadTxt(Direct))
+                string[] array = (TxtToArray.ReadTxt(Direct));
+                int[] lines = Array.ConvertAll(array, int.Parse);
+                LinearSort.LinSort(lines);
+                Console.WriteLine("linear sort done!\n" + "Sorted list here\n" + ("").PadRight(24, '-'));
+                foreach (int line in lines)
                 {
                     Console.WriteLine(line);
                 }
+                Console.WriteLine(("").PadRight(24, '-'));
             }
             else if (userFile == "256")
             {

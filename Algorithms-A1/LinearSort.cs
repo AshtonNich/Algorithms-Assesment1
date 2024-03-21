@@ -8,7 +8,7 @@ namespace Algorithms_A1
 {
     internal class LinearSort
     {
-        public static void Sort(int[] arr)
+        public static void LinSort(int[] arr)
         {
             int n = arr.Length;
             for (int i = 0; i < n - 1; i++)
