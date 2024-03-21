@@ -28,6 +28,7 @@ namespace Algorithms_A1
                 array[i] = temp;
             }
             Console.WriteLine("Steps taken - " + steps);
+            Console.WriteLine(("").PadRight(24, '-'));
         }
         public static void SelSortDescending(int[] array)
         {
@@ -49,6 +50,7 @@ namespace Algorithms_A1
                 array[i] = temp;
             }
             Console.WriteLine("Steps taken - " + steps);
+            Console.WriteLine(("").PadRight(24, '-'));
         }
     }
 }

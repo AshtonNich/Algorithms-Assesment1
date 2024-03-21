@@ -5,9 +5,9 @@ namespace Algorithms_A1
 {
     internal class TxtToArray
     {
-        public static string[] ReadTxt(string path)
+        public static string[] ReadTxt(string filePath)
         {
-            string[] lines = File.ReadAllLines(path);
+            string[] lines = File.ReadAllLines(filePath);
             return lines;
         }
     }

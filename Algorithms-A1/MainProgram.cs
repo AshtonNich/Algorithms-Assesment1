@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CMP1903_A1_2324
 {
@@ -101,7 +102,7 @@ namespace CMP1903_A1_2324
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     string userSearch = Console.ReadLine();
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    if (userSearch == "Yes")
+                    if (userSearch == "yes")
                     {
                         Console.WriteLine("What value would you like to search for?");
                         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -111,7 +112,7 @@ namespace CMP1903_A1_2324
                         LinearSearch.LinSearch(lines, Convert.ToInt32(userValue));
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
-                    else if (userSearch == "No")
+                    else if (userSearch == "no")
                     {
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
@@ -206,7 +207,7 @@ namespace CMP1903_A1_2324
                         LinearSearch.LinSearch(lines, Convert.ToInt32(userValue));
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
-                    else if (userSearch == "No")
+                    else if (userSearch == "no")
                     {
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
@@ -302,7 +303,7 @@ namespace CMP1903_A1_2324
                         LinearSearch.LinSearch(lines, Convert.ToInt32(userValue));
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
-                    else if (userSearch == "No")
+                    else if (userSearch == "no")
                     {
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
@@ -595,6 +596,11 @@ namespace CMP1903_A1_2324
                         Console.WriteLine(("").PadRight(24, '-'));
                     }
                 }
+                Console.WriteLine("Now displaying every tenth Value");
+                string Direct10th = @"Files\Net_1_2048.txt";
+                string[] array10th = (TxtToArray.ReadTxt(Direct10th));
+                int[] lines10th = Array.ConvertAll(array10th, int.Parse);
+                DisplayEveryTenthValue.DisplayTenthValue(lines10th);
 
             }
         }
